@@ -1,29 +1,43 @@
 ---
-title: 'My Final College Paper'
-author: 'Your R. Name'
+title: "My Thesis"
+author: "Your R. Name"
+department: "Biology"
 date: 'May 20xx'
-institution: 'Reed College'
-division: 'Mathematics and Natural Sciences'
-advisor: 'Advisor F. Name'
-# If you have more two advisors, un-silence line 7
-#altadvisor: 'Your Other Advisor'
-department: 'Mathematics'
-degree: 'Bachelor of Arts'
+copyright_year: "20xx"
+submitted_to: "The Graduate School"
+college_submitted_to: "Eberly College of Science"
+num_readers: "5"
+advisor_name: "Advisor F. Name"
+advisor_title: "Professor of Biology"
+reader_1_name: "Reader 1 Name"
+reader_1_title: "Prof ..."
+reader_2_name: "Reader 2 Name"
+reader_2_title: "Prof ..."
+reader_3_name: "Reader 3 Name"
+reader_3_title: "Prof ..."
+reader_4_name: "Reader 4 Name"
+reader_4_title: "Prof ..."
+reader_5_name: "Reader 5 Name"
+reader_5_title: "Prof ..."
+degree: "phd"
+# Options: "phd", "ms", "bs"
+doc_type: "Thesis"
+# Options: "Thesis", "Dissertation", "Comprehensive Document"
 knit: bookdown::render_book
 site: bookdown::bookdown_site
 
 # This will automatically install the {remotes} package and {thesisdown}
 # Change this to FALSE if you'd like to install them manually on your own.
 params:
-  'Install needed packages for {thesisdown}': True
+  'Install needed packages for {liondown}': True
   
 # Remove the hashtag to specify which version of output you would like.
 # Can only choose one at a time.
 output:
-  thesisdown::thesis_pdf: default 
-#  thesisdown::thesis_gitbook: default         
-#  thesisdown::thesis_word: default
-#  thesisdown::thesis_epub: default
+  liondown::thesis_pdf: default 
+#  liondown::thesis_gitbook: default         
+#  liondown::thesis_word: default
+#  liondown::thesis_epub: default
 
 # If you are creating a PDF you'll need to write your preliminary content 
 # (e.g., abstract, acknowledgements) below or use code similar to line 25-26 
@@ -35,11 +49,6 @@ abstract: '`r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims"
 # is needed on the line after the `|`.
 acknowledgements: |
   I want to thank a few people.
-dedication: |
-  You can have a dedication here if you wish. 
-preface: |
-  This is an example of a thesis setup to use the reed thesis document class 
-  (for LaTeX) and the R bookdown package, in general.
   
 # Specify the location of the bibliography below
 bibliography: bib/thesis.bib
@@ -67,7 +76,7 @@ If you receive a duplicate label error after knitting, make sure to delete the i
 # installed and loaded. This thesisdown package includes
 # the template files for the thesis.
 if (!require(remotes)) {
-  if (params$`Install needed packages for {thesisdown}`) {
+  if (params$`Install needed packages for {liondown}`) {
     install.packages("remotes", repos = "https://cran.rstudio.com")
   } else {
     stop(
@@ -76,20 +85,20 @@ if (!require(remotes)) {
     )
   }
 }
-if (!require(thesisdown)) {
-  if (params$`Install needed packages for {thesisdown}`) {
-    remotes::install_github("ismayc/thesisdown")
+if (!require(liondown)) {
+  if (params$`Install needed packages for {liondown}`) {
+    remotes::install_github("arnold-c/liondown")
   } else {
     stop(
       paste(
         "You need to run",
-        'remotes::install_github("ismayc/thesisdown")',
+        'remotes::install_github("arnold-c/liondown")',
         "first in the Console."
       )
     )
   }
 }
-library(thesisdown)
+library(liondown)
 # Set how wide the R output will go
 options(width = 70)
 ```
