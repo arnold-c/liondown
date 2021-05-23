@@ -17,11 +17,11 @@
 #'   template
 #' @examples
 #' \dontrun{
-#' output:thesisdown::thesis_pdf
+#' output:liondown::thesis_pdf
 #' }
 thesis_pdf <- function(toc = TRUE, toc_depth = 3, highlight = "default", pandoc_args = NULL, ...) {
   base <- bookdown::pdf_book(
-    template = "psu-template.tex",
+    template = "template.tex",
     toc = toc,
     toc_depth = toc_depth,
     highlight = highlight,
@@ -52,7 +52,7 @@ thesis_pdf <- function(toc = TRUE, toc_depth = 3, highlight = "default", pandoc_
 #' @return A gitbook webpage
 #' @examples
 #' \dontrun{
-#' output:thesisdown::thesis_gitbook
+#' output:liondown::thesis_gitbook
 #' }
 thesis_gitbook <- function(...) {
   config_default <- list(
@@ -111,7 +111,7 @@ thesis_gitbook <- function(...) {
 #' the Reed Senior Thesis Word template
 #' @examples
 #' \dontrun{
-#' output:thesisdown::thesis_word
+#' output:liondown::thesis_word
 #' }
 thesis_word <- function(...) {
   base <- bookdown::word_document2(...)
@@ -134,7 +134,7 @@ thesis_word <- function(...) {
 #' @return A ebook version of the thesis
 #' @examples
 #' \dontrun{
-#' output:thesisdown::thesis_epub
+#' output:liondown::thesis_epub
 #' }
 thesis_epub <- function(...) {
   base <- bookdown::epub_book(...)
