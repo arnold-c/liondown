@@ -49,7 +49,8 @@ abstract: '`r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims"
 # is needed on the line after the `|`.
 acknowledgements: |
   I want to thank a few people.
-  
+
+symbols: '`r if(knitr:::is_latex_output()) paste(readLines(here::here("prelims", "00-symbols.Rmd")), collapse = "\n  ")`'
 # Specify the location of the bibliography below
 bibliography: bib/thesis.bib
 # Download your specific csl file and refer to it in the line below.
