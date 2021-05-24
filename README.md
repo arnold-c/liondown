@@ -3,9 +3,10 @@
 
 This project provides a [bookdown](https://github.com/rstudio/bookdown)
 template for theses at Penn State University, and is an adaptation of
-Chester Ismay’s [`{thesisdown}`](https://github.com/ismayc/thesisdown)
-excellent package. I am currently using Dr Gary L. Gray’s Latex template
-and class files, from the Department of Engineering, which can be found
+Chester Ismay’s excellent
+[`{thesisdown}`](https://github.com/ismayc/thesisdown) package. I am
+currently using Dr Gary L. Gray’s Latex template and class files, from
+the Department of Engineering, which can be found
 [here](https://sites.esm.psu.edu/~gray/psu-latex-thesis-class.html)
 
 Currently, the PDF and gitbook versions are fully-functional. The word
