@@ -26,7 +26,7 @@ doc_type: "Thesis"
 knit: bookdown::render_book
 site: bookdown::bookdown_site
 
-# This will automatically install the {remotes} package and {thesisdown}
+# This will automatically install the {remotes} package and {liondown}
 # Change this to FALSE if you'd like to install them manually on your own.
 params:
   'Install needed packages for {liondown}': True
@@ -72,8 +72,8 @@ If you receive a duplicate label error after knitting, make sure to delete the i
 -->
 
 ```{r include_packages, include=FALSE}
-# This chunk ensures that the thesisdown package is
-# installed and loaded. This thesisdown package includes
+# This chunk ensures that the liondown package is
+# installed and loaded. This liondown package includes
 # the template files for the thesis.
 if (!require(remotes)) {
   if (params$`Install needed packages for {liondown}`) {
